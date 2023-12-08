@@ -2,11 +2,23 @@
 using namespace std;
 
 char before(char x){
-	//Write your function definition here
+    if((int)x >=65 && (int)x <= 90){
+        if((int)x == 65){
+            x = 'Z';
+            return x;
+        }
+        else{
+            (int)x--;
+            return x;
+        }
+    }
+    else{
+        x = '0';
+        return x;
+    }
 }
 
 int main(){
-	//Test Case
 	cout << before('A') << "\n";
 	cout << before('B') << "\n";
 	cout << before('P') << "\n";
